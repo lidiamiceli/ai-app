@@ -1,12 +1,23 @@
 .main {
-    padding: 5px 10px;
+    padding: 10px 20px; 
     background-color: var(--color-100);
     color: var(--color-0);
-    border: none;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--color-80); 
     cursor: pointer;
-    transition: all 0.35s ease;
+    transition: all 0.35s ease, transform 0.2s ease; 
+    font-size: 13px;
 
-    &:hover{
+    &:hover {
         background-color: var(--color-80);
+        color: var(--color-100); 
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+        transform: translateY(-3px); 
+    }
+
+    &:active {
+        transform: translateY(0); 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
 }
