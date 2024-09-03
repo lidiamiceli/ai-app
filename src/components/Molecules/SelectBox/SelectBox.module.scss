@@ -1,0 +1,36 @@
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  
+    h3 {
+      margin: 8px;
+      color: var(--color-100);
+      text-align: center;
+    }
+  
+    select {
+      padding: 10px 10px;
+      font-size: 1rem;
+      color: var(--color-100);
+      @include rounded-corners(8px);
+      @include gradient-background(#f0f0f0, #d9d9d9);
+      @include transition-ease(all, 0.3s);
+      border: 1px solid #ccc;
+      @include box-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  
+      &:hover {
+        @include gradient-background(#d9d9d9, #c0c0c0);
+      }
+  
+      &:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        @include box-shadow(0 0 0 3px rgba(100, 150, 250, 0.5));
+      }
+    }
+  }
+  

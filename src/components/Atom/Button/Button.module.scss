@@ -8,6 +8,7 @@
     cursor: pointer;
     transition: all 0.35s ease, transform 0.2s ease; 
     font-size: 13px;
+    @include standard-animation(0.35s);
 
     &:hover {
         background-color: var(--color-80);
@@ -20,4 +21,9 @@
         transform: translateY(0); 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
-}
+    
+    &:disabled {
+        opacity: 0.5;
+        }
+    }
+
