@@ -1,34 +1,26 @@
 export const listaGeneri = [
-    {
-      label: "Horror",
-      value: "horror",
-    },
-    {
-      label: "Fantasy",
-      value: "fantasy",
-    },
-    {
-      label: "Avventura",
-      value: "avventura",
-    },
-    {
-      label: "Romanzo",
-      value: "romanzo",
-    },
-    {
-      label: "Fantascienza",
-      value: "fantascienza",
-    },
-    {
-      label: "Narrativa",
-      value: "narrativa",
-    },
-    {
-      label: "Saggistica",
-      value: "saggistica",
-    },
-    {
-      label: "Umoristico",
-      value: "umoristico",
-    },
-  ];
+  {
+    label: "Horror",
+    value: "horror",
+  },
+  {
+    label: "Fantasy",
+    value: "fantasy",
+  },
+  {
+    label: "Avventura",
+    value: "avventura",
+  },
+  {
+    label: "Romantico",
+    value: "romantico",
+  },
+  {
+    label: "Fantascienza",
+    value: "fantascienza",
+  },
+  {
+    label: "Giallo",
+    value: "giallo",
+  },
+];

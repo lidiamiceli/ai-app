@@ -9,36 +9,36 @@ import { listaGeneri } from "@/constants/common";
 import Button from "@/components/Atom/Button/Button";
 
 export default function Home() {
-  const [titolo, setTitolo] = useState("");
-  const [autore, setAutore] = useState("");
+  const [protagonista, setProtagonista] = useState("");
+  const [antagonista, setAntagonista] = useState("");
   const [genere, setGenere] = useState("");
 
   const handleGenerate = () => {
-    console.log({ titolo, autore, genere });
+    console.log({ protagonista, antagonista, genere });
   };
 
   return (
     <>
       <Head>
-        <title>AI Book Generator</title>
-        <meta name="description" content="AI based app to generate book concepts" />
+        <title>Ai Story Teller</title>
+        <meta name="description" content="AI based app to generate stories" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={style.main}>
-        <Header title="AI Book Generator" />
+        <Header title="AI Story Teller" />
         <div className={style.content}>
-          <WindowBox title="Book Parameters">
+          <WindowBox title="Story Params">
             <div className={style.container}>
               <InputBox
-                label="Titolo del Libro:"
-                value={titolo}
-                setValue={setTitolo}
+                label="Nome Protagonista:"
+                value={protagonista}
+                setValue={setProtagonista}
               />
               <InputBox
-                label="Nome Autore:"
-                value={autore}
-                setValue={setAutore}
+                label="Nome Antagonista:"
+                value={antagonista}
+                setValue={setAntagonista}
               />
             </div>
             <div className={style.container}>
@@ -52,8 +52,8 @@ export default function Home() {
               label="Genera"
               onClick={handleGenerate}
               disabled={
-                titolo.trim().length <= 0 ||
-                autore.trim().length <= 0 ||
+                protagonista.trim().length <= 0 ||
+                antagonista.trim().length <= 0 ||
                 genere.trim().length <= 0
               }
             />

@@ -6,6 +6,8 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
+
+
 const Button = (props: ButtonProps) => {
   const { label, onClick, disabled } = props;
 
