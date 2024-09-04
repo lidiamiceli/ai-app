@@ -24,3 +24,11 @@ export const listaGeneri = [
     value: "giallo",
   },
 ];
+
+
+export const listaAmbientazioni = [
+  { value: "futuristica", label: "Futuristica" },
+  { value: "storica", label: "Storica" },
+  { value: "fantastica", label: "Fantastica" },
+  { value: "reale", label: "Reale" },
+];
