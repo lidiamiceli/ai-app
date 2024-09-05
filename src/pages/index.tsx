@@ -7,10 +7,7 @@ import SelectBox from "@/components/Molecules/SelectBox/SelectBox";
 import { useState } from "react";
 import { listaGeneri, listaAmbientazioni } from "@/constants/common";
 import Button from "@/components/Atom/Button/Button";
-import {
-  GenerateContentCandidate,
-  GoogleGenerativeAI,
-} from "@google/generative-ai";
+import {GenerateContentCandidate,GoogleGenerativeAI} from "@google/generative-ai";
 import SwitchBox from "@/components/Molecules/SwitchBox/SwitchBox";
 
 export default function Home() {
@@ -59,64 +56,67 @@ export default function Home() {
     setLoading(false);
   };    
 
-
   return (
     <>
       <Head>
-        <title>Ai Story Teller</title>
+        <title>Ai Story Generator</title>
         <meta name="description" content="AI based app to generate stories" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={style.main}>
-        <Header title="AI Story Teller" />
+        <Header title="AI Story Generator" />
         <div className={style.content}>
-          <WindowBox title="Story Params">
-            <div className={style.container}>
-              <InputBox
-                label="Protagonista:"
-                value={protagonista}
-                setValue={setProtagonista}
-              />
-              <InputBox
-                label="Antagonista:"
-                value={antagonista}
-                setValue={setAntagonista}
-              />
-              <SelectBox
-                label="Genere:"
-                list={listaGeneri}
-                setAction={setGenere}
-              />
-              <SelectBox
-                label="Ambientazione:"
-                list={listaAmbientazioni}
-                setAction={setAmbientazione}
-              />
-              <SwitchBox
-                label="Per Adulti:"
-                value={pegi18}
-                setValue={setPegi18}
-              />
-              <Button
-                label="Genera"
-                onClick={handleGenerate}
-                disabled={
-                  protagonista.trim().length <= 0 ||
-                  antagonista.trim().length <= 0 ||
-                  genere.trim().length <= 0 ||
-                  loading
-                }
-              />
-            </div>
-
-            {loading ? (
-              <div className={style.loading}>
+          <div className={style["window-box-container"]}>
+            <WindowBox title="GENERATE YOUR STORY">
+              <div className={style.container}>
+                <InputBox
+                  label="Protagonista:"
+                  value={protagonista}
+                  setValue={setProtagonista}
+                />
+                <InputBox
+                  label="Antagonista:"
+                  value={antagonista}
+                  setValue={setAntagonista}
+                />
+                <SelectBox
+                  label="Genere:"
+                  list={listaGeneri}
+                  setAction={setGenere}
+                />
+                <SelectBox
+                  label="Ambientazione:"
+                  list={listaAmbientazioni}
+                  setAction={setAmbientazione}
+                />
+                <SwitchBox
+                  label="Per Adulti:"
+                  value={pegi18}
+                  setValue={setPegi18}
+                />
+                <Button
+                  label="Genera"
+                  onClick={handleGenerate}
+                  disabled={
+                    protagonista.trim().length <= 0 ||
+                    antagonista.trim().length <= 0 ||
+                    genere.trim().length <= 0 ||
+                    loading
+                  }
+                />
               </div>
-            ) : (
-              <div className={style.result}>{response}</div>
-            )}
-          </WindowBox>
+              {loading && (
+               <div className={style.loading}>
+                <div className={style.blob}></div>
+               </div>
+              )}
+
+            </WindowBox>
+          </div>
+          <div className={style.result}>
+            {!loading && response}
+          </div>
         </div>
       </main>
     </>

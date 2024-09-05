@@ -5,16 +5,16 @@
     padding: 20px 30px; 
     height: 100px;
     width: 100%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--color-20) 100%); 
+    background: linear-gradient(135deg, var(--color-100) 0%, var(--color-80) 100%); 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); 
-    border-bottom: 1px solid #baac97;
-    border-radius: 0 0 10px 10px;
+    border-bottom: 1px solid var(--primary-color);
     transition: background 0.3s ease, box-shadow 0.3s ease; 
+    color: var(--color-20);
 }
 
 
 .main:hover {
-    background: linear-gradient(135deg, var(--color-20) 0%, var(--primary-color) 100%); 
+    background: linear-gradient(135deg, var(--color-80) 0%, var(--color-100) 100%); 
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
-    color: white;
+    color: var(--color-20);
 }

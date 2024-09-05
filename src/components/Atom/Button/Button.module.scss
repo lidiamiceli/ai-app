@@ -1,29 +1,29 @@
 .main {
-    padding: 10px 20px; 
-    background-color: var(--color-100);
-    color: var(--color-0);
+    padding: 12px 14px; 
+    background-color: var(--color-20);
+    color: var(--color-100); 
     border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid var(--color-80); 
+    border: none;
     cursor: pointer;
-    transition: all 0.35s ease, transform 0.2s ease; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 13px;
-    @include standard-animation(0.35s);
+    font-weight: bold;
+    text-transform: uppercase; 
+    text-align: center; 
+    margin: 30px;
 
     &:hover {
-        background-color: var(--color-80);
-        color: var(--color-100); 
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
-        transform: translateY(-3px); 
+        background-color: var(--color-20);
+        transform: translateY(-2px); 
+        color: var(--color-100);
     }
 
     &:active {
-        transform: translateY(0); 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        transform: translateY(0);
     }
     
     &:disabled {
         opacity: 0.5;
-        }
+        cursor: not-allowed; 
     }
-
+}

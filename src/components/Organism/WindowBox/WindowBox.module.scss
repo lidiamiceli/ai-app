@@ -1,13 +1,13 @@
 .main {
-    width: 100%;
+    width: 50%;
     max-width: 900px;
+    height: 100%;
     margin: auto;
-    padding: 20px;
     border-radius: 12px; 
-    background: linear-gradient(135deg, #C9C9C9, #FCFC62); 
+    background: linear-gradient(135deg, var(--color-100) 0%, var(--color-80) 100%); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--color-100); 
+    border: 1px solid var(--color-100);
+    color: var(--color-20); 
     transition: all 0.3s ease-in-out;
     text-align: center;
     display: flex;
@@ -16,9 +16,19 @@
     justify-content: center; 
     @include window-style();
     font-size: 14px;
+    font-weight: 500;
 }
-
-.main:hover {
+  
+  .main:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
     transform: translateY(-4px); 
-}
+  }
+  
+  .title {
+    margin: 20px;
+    font-size: 26px;
+    color: var(--color-20); 
+    
+  }
+  
+  

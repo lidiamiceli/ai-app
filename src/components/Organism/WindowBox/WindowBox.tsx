@@ -9,10 +9,12 @@ interface WindowBoxProps {
 
 const WindowBox = (props: WindowBoxProps) => {
   const { title, children } = props;
-  return <div className={style.main}>
-    {title && <h2>{title}</h2>}
-    {children}
-    </div>;
+  return (
+    <div className={style.main}>
+      {title && <h2 className={style.title}>{title}</h2>}
+      {children}
+    </div>
+  );
 };
 
 export default WindowBox;

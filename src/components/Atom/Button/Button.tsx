@@ -12,7 +12,9 @@ const Button = (props: ButtonProps) => {
   const { label, onClick, disabled } = props;
 
   return (
-    <button disabled={disabled} className={style.main} onClick={onClick}>
+    <button disabled={disabled} 
+    className={style.main} 
+    onClick={onClick}>
       {label}
     </button>
   );

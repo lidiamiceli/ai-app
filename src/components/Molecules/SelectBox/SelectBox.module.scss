@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center; 
+  margin: rem(8px);
 
   h3 {
-    margin-bottom: rem(5px);
-    color: var(--color-100);
+    margin: rem(8px);
+    color: var(--color-20);
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
@@ -15,19 +16,18 @@
     padding: 6px 10px;  
     color: var(--color-100);
     border-radius: 8px; 
-    background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
-    border: 1px solid #ccc;
+    background: linear-gradient(145deg, #F8F0FB, #d9d9d9);
+    border: 1px solid #1A1D1A;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     &:hover {
-      background: linear-gradient(145deg, #d9d9d9, #c0c0c0);
       border-color: var(--color-80);
     }
 
     &:focus {
       outline: none;
       border-color: var(--color-80);
-      box-shadow: 0 0 0 3px rgba(100, 150, 250, 0.5);  // Evidenzia il campo al focus
+      box-shadow: 0 0 0 3px rgba(100, 150, 250, 0.5);
     }
   }
 }

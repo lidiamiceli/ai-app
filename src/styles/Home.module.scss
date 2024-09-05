@@ -1,77 +1,94 @@
 .main {
   min-height: 100vh;
- 
+  display: flex;
+  flex-direction: column;
+
   .content {
-   padding: 20px 0;
- 
-   .container {
-     display: flex;
-     gap: 20px;
- 
-   }
- 
+    padding: 20px 0px;
+    display: flex;
+    gap: 20px; 
+    
+    .window-box-container {
+      flex: 1;
+      padding: 20px;
+    }
+
+    
    .result {
-     @include window-style(100%);
-     margin-top: rem(20px);
-     box-shadow: none;
-   }
-  }
- }
+  padding: 25px;
+  background: linear-gradient(135deg, var(--color-20) 0%, #F9F4F5 100%); 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--color-100);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  word-wrap: break-word;
+  margin: 20px;
+  overflow: auto;
+  flex: 1;
+  box-shadow: none;
+}
 
-
- 
-//caricamento
 .loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 100%; 
+  position: absolute; 
+  top: 0;
+  left: 0;
   width: 100%;
-  background: #f7f7f7;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; 
-  padding: 10px; 
+  background: rgba(243, 244, 246, 0.887); 
+  border-radius: 12px;
+}
+.blob {
+  width: 112px;
+  height: 112px;
+  display: grid;
+  background: #fff;
+  filter: blur(5.6px) contrast(10);
+  padding: 11.2px;
+  mix-blend-mode: darken;
+  position: relative; 
+}
 
-  p {
-    font-size: 1.2rem; 
-    color: var(--color-200);
-    font-weight: bold; 
+.blob:before,
+.blob:after {
+  content: "";
+  grid-area: 1/1;
+  width: 44.8px;
+  height: 44.8px;
+  background: #264078;
+  position: absolute; 
+  animation: blob-rhf26m 2s infinite;
+}
+
+.blob:after {
+  animation-delay: -1s;
+}
+
+@keyframes blob-rhf26m {
+  0% {
+    transform: translate(0, 0);
   }
 
-//animazione loading
-  &::before {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 50px;
-    border: 4px solid var(--primary-color);
-    border-top: 4px solid transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 0 auto;
+  25% {
+    transform: translate(100%, 0);
   }
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  50% {
+    transform: translate(100%, 100%);
+  }
+
+  75% {
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    transform: translate(0, 0);
   }
 }
 
-.result {
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: var(--color-100); 
-  font-size: 1rem; 
-  line-height: 1.5;
-  max-width: 800px; 
-  word-wrap: break-word;
-  margin: 20px auto;
-  overflow: auto;
+  }
 }
