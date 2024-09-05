@@ -1,40 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Story Generator
 
-## Getting Started
+## Descrizione
 
-First, run the development server:
+AI Story Generator è un'applicazione basata su Next.js che utilizza l'intelligenza artificiale per generare storie personalizzate. Gli utenti possono inserire dettagli come il nome del protagonista, dell'antagonista, il genere della storia, e l'ambientazione. È possibile scegliere se la storia è destinata a un pubblico adulto o per bambini. Inoltre, l'app offre la funzionalità di lettura vocale del racconto generato tramite l'API Web Speech.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funzionalità
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Generazione di storie personalizzate**: L'app utilizza l'intelligenza artificiale di Google Generative AI per creare racconti in base agli input dell'utente.
+- **Input personalizzati**: L'utente può scegliere il nome del protagonista, dell'antagonista, il genere della storia e l'ambientazione.
+- **Selezione PEGI**: Possibilità di creare storie per adulti o bambini.
+- **Lettura vocale**: Una volta generato il racconto, l'utente può far leggere la storia dall'applicazione tramite l'API Web Speech, con la possibilità di fermare la lettura.
+- **Caricamento con animazione**: Mentre l'AI genera la storia, viene mostrato un'animazione di caricamento.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Tecnologie utilizzate
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **Next.js**: Framework di React per creare l'applicazione web.
+- **Google Generative AI**: Per generare i racconti in base agli input dell'utente.
+- **Web Speech API**: Per la lettura vocale del testo generato.
+- **SCSS**: Per la gestione dello stile, inclusa l'animazione del caricamento.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Utilizzo
 
-To learn more about Next.js, take a look at the following resources:
+1. Inserisci il nome del protagonista e dell'antagonista.
+2. Seleziona il genere della storia (es: fantasy, horror, ecc.).
+3. Seleziona l'ambientazione.
+4. Scegli se la storia è per adulti o per bambini.
+5. Clicca su **Genera** per creare la tua storia.
+6. Dopo la generazione della storia, puoi cliccare su **Racconta** per ascoltare il racconto, oppure su **Stop** per fermare la lettura.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Funzionalità aggiuntive
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Animazione di caricamento**: Durante la generazione della storia, viene visualizzata un'animazione con un blob rotante.
+- **Accessibilità**: L'app supporta la lettura vocale del racconto generato tramite un sintetizzatore vocale.

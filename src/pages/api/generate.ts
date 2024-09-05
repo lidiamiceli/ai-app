@@ -13,13 +13,14 @@ export default async function handler(
     const apiKey = process.env.NEXT_PUBLIC_GEMINI_KEY;
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key= ${apiKey}`,
-      { method: 'POST',
+      {
+       method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-         prompt: {
-         text: prompt,
+           body: JSON.stringify({
+          prompt: {
+            text: prompt,
           },
         }),
       }
