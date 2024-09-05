@@ -1,6 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-import style from "./SwitchBox.module.scss";
-import Switch from "@/components/Atom/Switch/Switch";
+import { Dispatch, SetStateAction } from 'react';
+import style from './SwitchBox.module.scss';
+import Switch from '@/components/Atom/Switch/Switch';
 
 interface SwitchBoxProps {
   label: string;
@@ -8,9 +8,7 @@ interface SwitchBoxProps {
   setValue: Dispatch<SetStateAction<boolean>>;
 }
 
-const SwitchBox = (props: SwitchBoxProps) => {
-  const { label, value, setValue } = props;
-
+const SwitchBox = ({ label, value, setValue }: SwitchBoxProps) => {
   return (
     <div className={style.switchBox}>
       <label className={style.label}>{label}</label>

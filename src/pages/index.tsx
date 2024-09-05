@@ -34,8 +34,9 @@ export default function Home() {
       return;
     }
     try {
-      
-      const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_KEY);
+    
+      const genAI = new GoogleGenerativeAI(
+        process.env.NEXT_PUBLIC_GEMINI_KEY);
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       const result = await model.generateContent(prompt);
   
@@ -52,8 +53,7 @@ export default function Home() {
       console.error("Error generating content:", error);
       setResponse("Si è verificato un errore durante la generazione del contenuto.");
     }
-  
-    setLoading(false);
+      setLoading(false);
   };    
 
   return (
@@ -106,16 +106,16 @@ export default function Home() {
                   }
                 />
               </div>
-              {loading && (
-               <div className={style.loading}>
-                <div className={style.blob}></div>
-               </div>
-              )}
-
-            </WindowBox>
+              </WindowBox>
           </div>
           <div className={style.result}>
-            {!loading && response}
+            {loading ? (
+              <div className={style.loading}>
+                <div className={style.blob}></div>
+              </div>
+            ) : (
+              response
+            )}
           </div>
         </div>
       </main>
