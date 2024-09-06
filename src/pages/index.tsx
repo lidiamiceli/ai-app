@@ -9,7 +9,7 @@ import { listaGeneri, listaAmbientazioni } from "@/constants/common";
 import Button from "@/components/Atom/Button/Button";
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
 import SwitchBox from "@/components/Molecules/SwitchBox/SwitchBox";
-import Toast from "@/components/Atom/Toast/Toast";
+import Toast from "@/components/Atom/Toast/Toast"; 
 
 export default function Home() {
   const [protagonista, setProtagonista] = useState("");

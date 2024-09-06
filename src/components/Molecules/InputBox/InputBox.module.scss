@@ -1,20 +1,25 @@
 .main {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-
-
+    align-items: center;
+  
+  
     h3 {
-        margin: rem(8px);
-        font-weight:500;
+      margin: 5px;
+      font-weight: 500;
+      font-size: 1.1rem; 
+      color: var(--color-20); 
     }
     
-    input{
-        padding: 6px 10px;  
-        color: var(--color-100);
-        border-radius: 8px; 
-        background: var(--color-20);
-        border: 1px solid #ccc;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    input {
+      padding: 8px 12px;
+      color: var(--color-100);
+      border-radius: 8px;
+      background: var(--color-20);
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 100%; 
+      max-width: 400px; 
+      margin-bottom: 10px;
     }
-}
+  }
